@@ -1,0 +1,41 @@
+mysql> use webbook
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_webbook      |
++------------------------+
+| Customers              | 
+| Invoices               | 
+| Order_Items            | 
+| Orders                 | 
+| Payments               | 
+| Products               | 
+| Ref_Invoice_Status     | 
+| Ref_Order_Item_Status  | 
+| Ref_Order_Status       | 
+| Ref_Product_Categories | 
+| Shipment_items         | 
+| Shipments              | 
++------------------------+
+12 rows in set (0.00 sec)
+
+mysql> create table Customers2 as
+    -> select customer_id,customer_first_name,customer_last_name,login_name
+    -> from Customers;
+Query OK, 10000 rows affected (0.02 sec)
+Records: 10000  Duplicates: 0  Warnings: 0
+
+mysql> select * from Customers2 limit 0,5;
++-------------+---------------------+--------------------+------------+
+| customer_id | customer_first_name | customer_last_name | login_name |
++-------------+---------------------+--------------------+------------+
+|      100005 | Michael             | McClune            | Michael0   | 
+|      100007 | Michael             | Young              | Michael1   | 
+|      100009 | Jordan              | Ore                | Jordan2    | 
+|      100011 | Bjorn               | Ditty              | Bjorn3     | 
+|      100013 | Riza                | Zalameda           | Riza4      | 
++-------------+---------------------+--------------------+------------+
+5 rows in set (0.00 sec)

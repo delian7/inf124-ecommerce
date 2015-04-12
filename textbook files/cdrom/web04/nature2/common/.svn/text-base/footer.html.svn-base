@@ -1,0 +1,11 @@
+<!-- footer.html -->
+<div id="footer">
+  <div id="copyright">Nature's Source &copy; 2009 Porter Scobey and Pawan
+  Lingras</div>
+  <div id="footerMenu">
+    <ul id="footerLinks">
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<!-- employment.html -->
+<html>
+  <head>
+    <title>Nature's Source - Employment Opportunities</title>
+  </head>
+  <body>
+    <table summary="Employment Opportunities">
+      <!--#include virtual="common/logo.html"-->
+      <!--#include virtual="common/mainmenu.html"-->
+      <tr>
+        <td valign="top">
+          <p><a href="vision.html">Vision and Mission</a><br />
+          <a href="locations.html">Our Locations</a><br />
+          <a href="contact.html">Contact Us</a><br />
+          <a href="employment.html">Employment Opportunities</a><br />
+          <a href="news.html">News Archive</a></p>
+        </td>
+        <td colspan="4">
+          <p>Coming soon ... information on employment opportunities with 
+          our company. As we grow and expand, and open new locations, we
+          will continually be looking for new empoyees who are interested
+          in a healthy lifestyle for themselves and helping to provide the
+          same for others. If you are such a person, you may wish to submit
+          your resume to us.</p>
+        </td>
+      </tr>
+      <!--#include virtual="common/footer.html"-->
+    </table>
+  </body>
+</html>

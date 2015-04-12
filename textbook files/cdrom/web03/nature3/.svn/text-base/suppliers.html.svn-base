@@ -1,0 +1,27 @@
+<!-- suppliers.html -->
+<html>
+  <head>
+    <title>Nature's Source - Suppliers</title>
+  </head>
+  <body>
+    <table summary="Suppliers">
+      <!--#include virtual="common/logo.html"-->
+      <!--#include virtual="common/mainmenu.html"-->
+      <tr>
+        <td valign="top">
+          <p><a href="featured.html">Featured Products</a><br />
+          <a href="services.html">Services</a><br />
+          <a href="suppliers.html">Suppliers</a></p>
+        </td>
+        <td colspan="4">
+          <p>Coming soon ... a complete list of our suppliers. Nature's
+          Source realizes that our clients will be interested in the source
+          of the products we make available to our customers. We will make
+          available here a list of those who supply our products and, where
+          relevant, those who assist us to provide our services.</p>
+        </td>
+      </tr>
+      <!--#include virtual="common/footer.html"-->
+    </table>
+  </body>
+</html>

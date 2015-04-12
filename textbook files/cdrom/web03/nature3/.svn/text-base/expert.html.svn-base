@@ -1,0 +1,27 @@
+<!-- expert.html -->
+<html>
+  <head>
+    <title>Nature's Source - Ask an expert</title>
+  </head>
+  <body>
+    <table summary="Ask an expert">
+      <!--#include virtual="common/logo.html"-->
+      <!--#include virtual="common/mainmenu.html"-->
+      <tr>
+        <td valign="top">
+          <p><a href="expert.html">Ask an expert</a><br />
+          <a href="tools.html">Tools &amp; Resources</a><br />
+          <a href="links.html">Useful Links</a></p>
+        </td>
+        <td colspan="4">
+          <p>Coming soon ... a form to submit a health-related question.
+          Nature's Source recognizes that our clients will, from time to
+          time, have questions that relate to the health of themselves or
+          their family members and we will provide a form for submitting
+          such questions and then do our best to answer them.</p>
+        </td>
+      </tr>
+      <!--#include virtual="common/footer.html"-->
+    </table>
+  </body>
+</html>

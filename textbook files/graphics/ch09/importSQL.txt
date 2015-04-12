@@ -1,0 +1,72 @@
+webbook > mysql -u webbook -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 37531
+Server version: 5.0.75-0ubuntu10.2 (Ubuntu)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> use webbook1;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> quit
+Bye
+webbook > mysql -u webbook -p webbook1 < backupbookSep09.sql
+Enter password: 
+webbook > mysql -u webbook -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 37533
+Server version: 5.0.75-0ubuntu10.2 (Ubuntu)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> use webbook1;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_webbook1     |
++------------------------+
+| Customers              | 
+| Invoices               | 
+| Order_Items            | 
+| Orders                 | 
+| Payments               | 
+| Products               | 
+| Ref_Invoice_Status     | 
+| Ref_Order_Item_Status  | 
+| Ref_Order_Status       | 
+| Ref_Product_Categories | 
+| Shipment_items         | 
+| Shipments              | 
++------------------------+
+12 rows in set (0.00 sec)
+
+mysql> select customer_first_name,customer_last_name from Customers limit 0,5;
++---------------------+--------------------+
+| customer_first_name | customer_last_name |
++---------------------+--------------------+
+| Michael             | McClune            | 
+| Michael             | Young              | 
+| Jordan              | Ore                | 
+| Bjorn               | Ditty              | 
+| Riza                | Zalameda           | 
++---------------------+--------------------+
+5 rows in set (0.00 sec)
+
+mysql> select count(*) from Customers;
++----------+
+| count(*) |
++----------+
+|    10000 | 
++----------+
+1 row in set (0.01 sec)
+
+mysql> quit
+Bye
+webbook >

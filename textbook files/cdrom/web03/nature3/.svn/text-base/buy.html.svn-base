@@ -1,0 +1,21 @@
+<!-- buy.html -->
+<html>
+  <head>
+    <title>Nature's Source - Our E-Store</title>
+  </head>
+  <body>
+    <table summary="Our E-Store">
+      <!--#include virtual="common/logo.html"-->
+      <!--#include virtual="common/mainmenu.html"-->
+      <tr>
+        <td colspan="5">
+          <p>Keep watching this space for our e-store. You will soon be able
+          to purchase any of our products on-line and have them shipped to
+          your home or business. We will also be interested to receive your
+          feedback for suggested improvements as our site develops.</p>
+        </td>
+      </tr>
+      <!--#include virtual="common/footer.html"-->
+    </table>
+  </body>
+</html>

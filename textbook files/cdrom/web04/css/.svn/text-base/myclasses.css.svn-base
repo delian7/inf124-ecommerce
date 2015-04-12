@@ -1,0 +1,36 @@
+/* myclasses.css */
+
+/* Styles that apply to every element in the body, unless overridden */
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: large;
+color: #000;
+background-color: #FF0; /* yellow */
+}
+
+h1 {color: #00F;} /* Overrides body font color style above */
+
+/* Styles any list item in an unordered list */
+ul li {
+font-size: medium; /* Overrides body font size above */
+font-style: italic;
+}
+
+/* A "generic" class whose styles can be applied to any element */
+.BoldItalic {
+font-weight: bold;
+font-style: italic;
+}
+
+/* A "generic" class whose styles can be applied to any element */
+.BlackOnWhiteSerif {
+font-family: Georgia, "Times New Roman", Times, serif;
+color: #000;
+background-color: #FFF;
+}
+
+/* A class that can only be applied to paragraph elements */
+p.Standout {
+color: #F00; /* red */
+background-color: #D3D3D3; /* lightgrey */
+}

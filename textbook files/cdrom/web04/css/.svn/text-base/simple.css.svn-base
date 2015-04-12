@@ -1,0 +1,3 @@
+/* simple.css */
+body {background-color: yellow;}
+h1 {color: blue;}
