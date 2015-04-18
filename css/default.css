@@ -1,0 +1,38 @@
+body {
+
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+div#page {
+  width: 768px;
+  margin:0 auto;
+}
+
+div#mainMenu {
+  width:100%;
+  height:20px;
+  background-color: #362f7f;
+  color: white
+}
+
+ul#mainLinks li {
+float: left;
+width: 23%;
+padding-bottom: 5px;
+text-align: center;
+}
+
+.container {
+
+}
+
+div#main {
+  float:left;
+  width:70%
+}
+
+div#receipt {
+  float:right;
+  width: 30%
+  }
