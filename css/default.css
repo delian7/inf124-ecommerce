@@ -13,26 +13,31 @@ div#mainMenu {
   background-color: #362f7f;
   color: white
 }
-.grid {
+.grid-container {
   width: 100%;
   max-width: 1200px;
+  box-sizing: border-box;
 }
 .row:before, .row:after {
   content: "";
   display: table;
   clear: both;
 }
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  width: 50%;
+.row {
+  margin-bottom:2em;
 }
 .col-1 {
-  width: 16.66%;
+  width: 45%;
+  margin-left:1em;
+  float: left;
+  min-height: 1px;
+  border-style: solid;
+  border-color: #004c78;
+  border-radius: 25px;
+  margin-bottom:1em
 }
-.col-2 {
-  width: 33.33%;
-}
+
+
 .button {
   width: auto;
   height: 75px;
@@ -54,7 +59,7 @@ ul#mainLinks li {
 }
 div#main {
   float: left;
-  width: 70%
+  width: 75%
 }
 div#receipt {
   float: right;
