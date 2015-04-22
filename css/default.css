@@ -26,6 +26,8 @@ div#mainMenu {
 .row {
   margin-bottom:2em;
 }
+
+
 .col-1 {
   width: 45%;
   margin-left:5px;
@@ -38,6 +40,23 @@ div#mainMenu {
   text-align: center;
   padding: 5px 0 5px 0
 }
+
+
+.col-5 {
+  width: 45%;
+  margin-left: 5px;
+  float: left;
+  padding: 5px 0 5px 0
+}
+
+.col-6 {
+  width: 45%;
+  margin-left: 5px;
+  float: left;
+  text-align: center;
+  padding: 5px 0 5px 0
+}
+
 
 
 .button {
