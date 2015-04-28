@@ -13,6 +13,11 @@ div#mainMenu {
   background-color: #362f7f;
   color: white
 }
+
+a {
+  color:white
+}
+
 .grid-container {
   width: 100%;
   max-width: 1200px;
