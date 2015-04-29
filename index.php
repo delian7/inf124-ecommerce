@@ -11,7 +11,9 @@
 
   <div id="page">
 
-    <!--#include virtual="common/mainmenu.html"-->
+    <?php
+    include("common/mainmenu.html");
+    ?>
 
     <div class="container">
       <div id="main">
