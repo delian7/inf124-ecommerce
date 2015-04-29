@@ -1,4 +1,0 @@
-webbook > mysqldump -u webbook -p webbook > backupbookSep09.sql
-Enter password: 
-webbook > ls -l backupbookSep09.sql 
--rw------- 1 pawan pawan 1751057 2009-09-20 07:01 backupbookSep09.sql
