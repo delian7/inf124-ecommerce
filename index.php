@@ -21,7 +21,7 @@
 
           <div class="row">
             <a href="#"><span class="col-1"><img id="logo" height="75" src="assets/img/chipotle.png"></span></a>
-            <a href="#"><span class="col-1"><img id="logo" height="75" src="assets/img/starbucks.png"></span></a>
+            <a href="starbucks.php"><span class="col-1"><img id="logo" height="75" src="assets/img/starbucks.png"></span></a>
           </div>
           <div class="row">
             <a href="in-n-out.php"><span class="col-1"><img id="logo" height="75" src="assets/img/in-n-out.png"></span></a>
