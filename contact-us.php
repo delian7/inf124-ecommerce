@@ -12,9 +12,7 @@
 <body>
 
   <div id="page">
-    <<?php
-    include("common/mainmenu.html");
-    ?>
+    <?php include("common/mainmenu.html");?>
 
     <div class="main">
       <h1>Contact Us</h1>
