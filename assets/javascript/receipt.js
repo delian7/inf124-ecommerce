@@ -27,7 +27,7 @@ function drawReceipt() {
   var cell2 = row.insertCell(1);
 
   cell1.innerHTML = "<strong>Item(s) Ordered</strong>";
-  cell2.innerText = "<strong>Price (x qty)</strong>";
+  cell2.innerHTML = "<strong>Price(x qty)</strong>";
 
   //go through all of the (array) of orders
   for (var i = 0; i < allOrders[0].length; i++) {
