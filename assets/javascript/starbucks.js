@@ -1,14 +1,19 @@
 function validateStarbucksForm() {
-  var id=1;
-  var price = "price";
-  while (document.getElementById(id)!=null){
-    var starbucks = document.getElementById(id);
-    if(starbucks.options[starbucks.selectedIndex].value!=0) {
-      var priceid=price.concat(id);
-      alert('you have selected: ' + document.getElementById(priceid).textContent);
-    };
 
+  //find the starbucksMenu (table)
+  var table = document.getElementById("starbucksMenu");
+  //get ALL of the 'select' elements
+  var input = table.getElementsByTagName('select');
 
-    id++;
+  //iterate through all form fields
+  for (var i = 0; i < input.length; i++) {
+    //get the innerText of element at i
+    var drink = document.getElementsByClassName("drinkName")[i].innerText;
+    var price = parseFloat(document.getElementsByClassName("price")[i].innerText, 10);
+    //get the value of the select at i
+    var quantity = parseFloat(input[i].value);
+
+    if (quantity != 0)
+      alert("You ordered a " + drink + "which costs " + price +". \n\nThe total price is: " + price * quantity);
   };
 };
