@@ -6,7 +6,10 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <script language="javascript" type="text/javascript" src="assets/javascript/starbucks.js"></script>
+  <script language="javascript" type="text/javascript" src="assets/javascript/receipt.js"></script>
 </head>
+
+<script>console.log(window.name)</script>
 
 <body>
 
@@ -20,8 +23,8 @@
         <p>
           To order, please choose the quantity of your favorite drink
         </p>
-        <form id="starbucksForm" action="" onsubmit="validateStarbucksForm()">
-          <table id="starbucksMenu" summary="starbucks order form">
+        <form id="starbucksForm" action="" onsubmit="drawReceipt()">
+          <table id="starbucksTable" summary="starbucks order form">
             <th>Drink</th>
             <th>Price</th>
             <th>Order Quantity</th>
@@ -77,11 +80,9 @@
 
             <tr>
               <td>
-                <input type="button" onClick="validateStarbucksForm()" value="Checkout" />
+                <input type="button" onClick="validateStarbucksForm()" value="Order" />
               </td>
-              <td align="right">
-                <input type="reset" value="Reset Form" />
-              </td>
+
             </tr>
 
           </table>
