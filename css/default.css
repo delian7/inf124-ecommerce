@@ -87,3 +87,8 @@ div#receipt {
   margin-left: auto;
   margin-right: auto
 }
+
+.coming-soon{
+  background-image: url("../assets/img/coming-soon.png");
+
+}
