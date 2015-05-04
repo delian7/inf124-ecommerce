@@ -23,33 +23,45 @@ function drawReceipt() {
 
   //insert Table Headers
   var row = receiptTable.insertRow(0);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
 
+  var cell0 = row.insertCell(0);
+  cell0.style.width = "3em";
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+
+  cell0.innerHTML = "<strong>Qty</strong>"
   cell1.innerHTML = "<strong>Item(s) Ordered</strong>";
   cell2.innerHTML = "<strong>Price(x qty)</strong>";
 
   //go through all of the (array) of orders
   for (var i = 0; i < allOrders[0].length; i++) {
+    var quantity = allOrders[0][i].quantity;
     var drink = allOrders[0][i].drink;
     var price = allOrders[0][i].price * allOrders[0][i].quantity;
     totalPrice += price;
 
     //make a new row at the 2nd position (after the table headers (<th>))
     var row = receiptTable.insertRow(1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
 
-    cell1.innerHTML = drink;
+    cell0.innerText = quantity;
+    cell1.innerText = drink;
     cell2.innerText = "$" + price.toFixed(2);
 
   };
 
   //insert subtotal row at last position for SUBTOTAL
   var row = receiptTable.insertRow(allOrders[0].length + 1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
+  row.style.height = "3em";
 
+
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+
+  cell0.innerText = "";
   cell1.innerHTML = "<strong>SUBTOTAL: </strong>";
   cell2.innerHTML = "$" + totalPrice.toFixed(2);
 }
