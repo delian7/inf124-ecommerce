@@ -19,7 +19,7 @@
         <div class="grid-container outline">
 
           <div class="row">
-            <a href="#">
+            <a href="chipotle.php">
               <span class="col-1 coming-soon">
                 <img id="logo" height="75" src="assets/img/chipotle.png">
 

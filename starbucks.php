@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Food2U</title>
+  <title>Food2U | Starbucks</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <script language="javascript" type="text/javascript" src="assets/javascript/starbucks.js"></script>
