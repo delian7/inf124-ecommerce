@@ -1,122 +1,233 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Food2U | In-N-Out</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-  </head>
+
+<head>
+  <title>Food2U | In-N-Out</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <script language="javascript" type="text/javascript" src="assets/javascript/in-n-out.js"></script>
+  <script language="javascript" type="text/javascript" src="assets/javascript/receipt.js"></script>
+</head>
+
 <body>
 
   <div id="page">
 
-    <?php include("common/mainmenu.html");?>
+    <?php include( "common/mainmenu.html");?>
 
     <div class="container">
       <div id="main">
         <img id="logo" width=95% src="assets/img/in-n-out.png">
-      </br></br>
-      <div class="grid-container outline">
-        <div class="row">
-          <span class="col-5"><p>Double-Double</p></span>
-          <span class="col-6"><p>$3.45
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </p></span>
-    </div>
-
-        <div class="row">
-          <span class="col-5"><p>Cheeseburger</p></span>
-          <span class="col-6"><p>$2.35
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </p></span>
-      </div>
-
-      <div class="row">
-        <span class="col-5"><p>Hamburger</p></span>
-          <span class="col-6"><p>$2.05
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </p></span>
-      </div>
-
-      <div class="row">
-        <span class="col-5"><p>French Fries</p></span>
-        <span class="col-6"><p>$1.60
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </p></span>
-      </div>
-
-      <div class="row">
-        <span class="col-5"><p>Sodas/Drinks:<br>Coke ,Root Beer, Dr. Pepper,<br>Seven-Up, Lemonade, IcedTea</p></span>
-        <span class="col-6">
-          <p>SM $1.45 MED $1.55</br>LG $1.75 X-LG $1.95</p>
-        <select name="drink">
-          <option value="0">--choose drink--</option>
-          <option value="coke">Coke</option>
-          <option value="root-beer">Root Beer</option>
-          <option value="dr-pepper">Dr. Pepper</option>
-          <option value="seven-up">Seven-Up</option>
-          <option value="lemonade">Lemonade</option>
-          <option value="tea">Iced Tea</option>
-        </select>
-      </br>
-        <select name="size">
-          <option value="0">size</option>
-          <option value="small">SM $1.45</option>
-          <option value="medium">MED $1.55</option>
-          <option value="large">LG $1.75</option>
-          <option value="xlarge">X-LG $1.95</option>
-        </select>
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </span>
-    </div>
-      <div class="row">
-        <span class="col-5"><p>Shakes:<br>Chocolate, Strawberry, Vanilla</p></span>
-        <span class="col-6"><p>$2.10
         </br>
-        <select name="shake">
-          <option value="0">--choose shake--</option>
-          <option value="chocolate">Chocolate</option>
-          <option value="strawberry">Strawberry</option>
-          <option value="vanilla">Vanilla</option>
-        </select>
-        <select name="quantity">
-          <option value="0">qty</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </p></span>
-    </div>
+        <form id="INOform" action="" onsubmit="validateINOform()">
+          <table id=INOmenu summary="in-n-out order form">
+            <th width="50%">Burgers & Fries</th>
+            <th width="50%">Price</th>
+
+            <tr valign="top">
+              <td>
+                </br>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" width="33%">
+                <label class="itemName" for="1">Double-Double</label>
+              </td>
+              <td class="price" width="33%" align="center">$3.45</td>
+              <td width="33%" align="center">
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td width="33%" align="center">
+                <label class="itemName" for="2">Cheeseburger</label>
+              </td>
+              <td class="price" width="33%" align="center">$2.35</td>
+              <td width="33%" align="center">
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td width="33%" align="center">
+                <label class="itemName" for="3">Hamburger</label>
+              </td>
+              <td class="price" width="33%" align="center">$2.05</td>
+              <td width="33%" align="center">
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td width="33%" align="center">
+                <label class="itemName" for="4">French Fries</label>
+              </td>
+              <td class="price" width="33%" align="center">$1.60</td>
+              <td width="33%" align="center">
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td>
+                </br>
+              </td>
+            </tr>
+            <th width="100%">
+              Drinks
+            </th>
+            <tr valign="top">
+              <td align="center" width="33%">
+                <label class="itemName" for="1">Small</label>
+              </td>
+              <td class="price" width="33%" align="center">$1.45</td>
+              <td width="33%" align="center">
+                <select name="drink">
+                  <option>--choose drink--</option>
+                  <option value="coke">Coke</option>
+                  <option value="root-beer">Root Beer</option>
+                  <option value="dr-pepper">Dr. Pepper</option>
+                  <option value="seven-up">Seven-Up</option>
+                  <option value="lemonade">Lemonade</option>
+                  <option value="tea">Iced Tea</option>
+                </select>
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+
+              <td align="center" width="33%">
+                <label class="itemName" for="1">Medium</label>
+              </td>
+              <td class="price" width="33%" align="center">$1.55</td>
+              <td width="33%" align="center">
+                <select name="drink">
+                  <option>--choose drink--</option>
+                  <option value="coke">Coke</option>
+                  <option value="root-beer">Root Beer</option>
+                  <option value="dr-pepper">Dr. Pepper</option>
+                  <option value="seven-up">Seven-Up</option>
+                  <option value="lemonade">Lemonade</option>
+                  <option value="tea">Iced Tea</option>
+                </select>
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+
+              <td align="center" width="33%">
+                <label class="itemName" for="1">Large</label>
+              </td>
+              <td class="price" width="33%" align="center">$1.75</td>
+              <td width="33%" align="center">
+
+                <select name="drink">
+                  <option>--choose drink--</option>
+                  <option value="coke">Coke</option>
+                  <option value="root-beer">Root Beer</option>
+                  <option value="dr-pepper">Dr. Pepper</option>
+                  <option value="seven-up">Seven-Up</option>
+                  <option value="lemonade">Lemonade</option>
+                  <option value="tea">Iced Tea</option>
+                </select>
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+
+              <td align="center" width="33%">
+                <label class="itemName" for="1">X-Large</label>
+              </td>
+              <td class="price" width="33%" align="center">$1.95</td>
+              <td width="33%" align="center">
+                <select name="drink">
+                  <option>--choose drink--</option>
+                  <option value="coke">Coke</option>
+                  <option value="root-beer">Root Beer</option>
+                  <option value="dr-pepper">Dr. Pepper</option>
+                  <option value="seven-up">Seven-Up</option>
+                  <option value="lemonade">Lemonade</option>
+                  <option value="tea">Iced Tea</option>
+                </select>
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+
+              <td align="center" width="33%">
+                <label class="itemName" for="1">Shakes</label>
+              </td>
+              <td class="price" width="33%" align="center">$2.10</td>
+              <td width="33%" align="center">
+
+                <select name="shake">
+                  <option>--choose shake--</option>
+                  <option value="chocolate">Chocolate</option>
+                  <option value="strawberry">Strawberry</option>
+                  <option value="vanilla">Vanilla</option>
+                  <option value="neapolitan">Neapolitan</option>
+                </select>
+                <select>
+                  <option>--qty--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+
+
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" onClick="validateINOform()" value="Order" />
+              </td>
+
+            </tr>
+
+          </table>
+        </form>
       </div>
-    </div>
 
-    <?php include("common/sidebar.html");?>
-
+      <?php include( "common/sidebar.html");?>
     </div>
 
   </div>
 </body>
+
 </html>
