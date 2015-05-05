@@ -1,10 +1,21 @@
 <div id="header">
   <img src="./assets/img/banner.jpg" alt="buger banner">
 </div>
-<div id="mainMenu">
-  <ul id="mainLinks">
+<div id="mainMenu" onmouseout="hide()">
+  <ul class="Links" id="mainLinks">
     <li><a href="./index.php">Home</a></li>
-    <li>FAQ</li>
+    <li>
+      <a href="" onmouseover="show('m3')">Our Restaurants</a>
+      <div id="m3" onmouseover="show('m3')">
+        <a href="#">In-N-Out Irvine</a>
+        <a href="#">Starbucks</a>
+        <a href="#">Chipotle: COMING SOON</a>
+        <a href="#">Chick-Fil-A: COMING SOON</a>
+      </div>
+    </li>
+    <li><a href="#">FAQ</a></li>
     <li><a href="./contact-us.php">Contact Us</a></li>
   </ul>
 </div>
+
+<script language="javascript" type="text/javascript" src="./assets/javascript/menu.js"></script>

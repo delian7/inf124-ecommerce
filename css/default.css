@@ -77,7 +77,7 @@ a {
 }
 ul#mainLinks li {
   float: left;
-  width: 23%;
+  width: 24.5%;
   padding-bottom: 5px;
   text-align: center;
 }
@@ -101,5 +101,45 @@ div#receipt {
 
 .coming-soon{
   background-image: url("../assets/img/coming-soon.png");
+}
 
+.Links {
+  padding: 0;
+  margin: 0;
+}
+
+.Links li{
+  float:left;
+  list-style: none;
+}
+
+.Links li a {
+  display: block;
+  width: 100%;
+  padding: 4px 10px;
+  margin: 0 1px 0 0;
+  background-color: #362f7f;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+
+.Links li a:hover {
+  background-color: #7b0a00;
+}
+
+.Links div {
+  position: absolute;
+  background-color: #362f7f;
+  border: 1px solid black;
+  visibility: hidden;
+}
+
+.Links div a{
+  display: block;
+  width: 90%;
+  padding: 5px 10px;
+  text-align: left;
+  text-decoration: none;
 }
