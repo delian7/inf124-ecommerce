@@ -36,7 +36,7 @@ function drawReceipt() {
   //go through all of the (array) of orders
   for (var i = 0; i < allOrders[0].length; i++) {
     var quantity = allOrders[0][i].quantity;
-    var drink = allOrders[0][i].drink;
+    var item = allOrders[0][i].item;
     var price = allOrders[0][i].price * allOrders[0][i].quantity;
     totalPrice += price;
 
@@ -47,7 +47,7 @@ function drawReceipt() {
     var cell2 = row.insertCell(2);
 
     cell0.innerText = quantity;
-    cell1.innerText = drink;
+    cell1.innerText = item;
     cell2.innerText = "$" + price.toFixed(2);
 
   };

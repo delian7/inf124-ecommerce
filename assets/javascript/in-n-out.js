@@ -1,10 +1,10 @@
-function validateStarbucksForm() {
+function validateINOform() {
 
   //find the starbucksTable
-  var starbucksTable = document.getElementById("starbucksTable");
+  var inoMenu = document.getElementById("INOmenu");
 
   //get ALL of the 'select' elements from the starbucksTable
-  var input = starbucksTable.getElementsByTagName('select');
+  var input = inoMenu.getElementsByTagName('select');
 
   var total = 0;
   var orders = [];
@@ -12,7 +12,7 @@ function validateStarbucksForm() {
   //iterate through all form fields
   for (var i = 0; i < input.length; i++) {
     //get the innerText of element at i
-    var drink = document.getElementsByClassName("drinkName")[i].innerText;
+    var item = document.getElementsByClassName("itemName")[i].innerText;
     var price = parseFloat(document.getElementsByClassName("price")[i].innerText, 10);
     //get the value of the select at i
     var quantity = parseFloat(input[i].value);
@@ -20,7 +20,7 @@ function validateStarbucksForm() {
     if (quantity != 0) {
 
       var order = {
-        item: drink,
+        item: item,
         price: price,
         quantity: quantity
       }
