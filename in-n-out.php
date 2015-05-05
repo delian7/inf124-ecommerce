@@ -96,7 +96,7 @@
             </th>
             <tr valign="top">
                 <td>
-                <label class="itemName" for="5">Small</label>
+                <label class="itemName" for="5">Small Drink</label>
               </td>
               <td class="price" align="center" colspan="2">1.45</td>
               <td align="center">
@@ -120,7 +120,7 @@
             </tr>
             <tr>
               <td>
-                <label class="itemName" for="6">Medium</label>
+                <label class="itemName" for="6">Medium Drink</label>
               </td>
               <td class="price" align="center" colspan="2">1.55</td>
               <td align="center">
@@ -145,7 +145,7 @@
             <tr>
 
               <td>
-                <label class="itemName" for="7">Large</label>
+                <label class="itemName" for="7">Large Drink</label>
               </td>
               <td class="price" align="center" colspan="2">1.75</td>
               <td align="center">
@@ -172,7 +172,7 @@
             <tr>
 
               <td>
-                <label class="itemName" for="8">X-Large</label>
+                <label class="itemName" for="8">X-Large Drink</label>
               </td>
               <td class="price" align="center" colspan="2">1.95</td>
               <td align="center">

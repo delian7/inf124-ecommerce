@@ -1,10 +1,12 @@
 function sendEmail()
 {
   var contactFormObj = document.getElementById("contactForm");
-  if (validateInput(contactFormObj))
-  {
-    createMessage(contactFormObj);
-  }
+
+  return validateInput(contactFormObj);
+  // if (validateInput(contactFormObj))
+  // {
+  //   createMessage(contactFormObj);
+  // }
 }
 
 function createMessage(contactFormObj)

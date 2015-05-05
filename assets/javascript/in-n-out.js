@@ -1,9 +1,9 @@
 function validateINOform() {
 
-  //find the starbucksTable
+  //find the inoMenu
   var inoMenu = document.getElementById("INOmenu");
 
-  //get ALL of the 'select' elements from the starbucksTable
+  //get ALL of the 'select' elements from the inoMenu
   var input = inoMenu.getElementsByTagName('select');
 
   var total = 0;

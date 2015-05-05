@@ -4,6 +4,7 @@
 <head>
   <title>Contact Us</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta http-equiv="refresh" content="60" />
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <script type="text/javascript" src="assets/javascript/contact-us.js">
   </script>
@@ -18,7 +19,7 @@
       <h1>Contact Us</h1>
       <p>We'd love to hear some feedback from our users!</p>
       <br/>
-      <form id="contactForm" action="" onsubmit="sendEmail()">
+      <form id="contactForm" action="processFeedback.php" onsubmit="return sendEmail()" method="post">
           <table summary="Contact Us">
             <tr>
               <td>First Name:</td>
@@ -48,7 +49,13 @@
             </tr>
 
             <tr>
-              <td><input type="submit" value="Send Message" /></td>
+              <td colspan="2"><p><label for="reply">Do you want a response to your message?</label>
+                <input id="reply" type="checkbox" name="reply" value="yes"/></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="submit" value="Send Message"></td>
               <td align="right"><input type="reset" value="Clear Form" /></td>
             </tr>
           </table>
