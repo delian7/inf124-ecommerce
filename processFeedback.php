@@ -40,7 +40,7 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
 $filename = "data/feedback.txt";
 
 $fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
-chmod($filename, 0777);
+chmod($filename, 777);
 
 fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
 
