@@ -1,6 +1,7 @@
 //global variable allOrders to keep track of allOrders
 allOrders = [];
 var totalPrice = 0;
+var numOfOrders = allOrders[0].length;
 
 
 //this function really does nothing right now since we need PHP to store the variables in our current session
@@ -100,14 +101,16 @@ function renderUserForm(formTable) {
     cell0.innerHTML = '<input type="text" name="address" size="20" placeholder="Address">'
     cell1.innerText = ', Irvine, CA';
 
-    //phone
+    //phone & hidden fields
     var row = formTable.insertRow();
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);
     var cell2 = row.insertCell();
+    var cell3 = row.insertCell();
     cell0.innerHTML = '<input type="text" name="phone" size="15" placeholder="Phone Number">'
     cell1.innerHTML = '<input type="text" name="email" size="15" placeholder="Email">'
     cell2.innerHTML = "<input type='hidden' name='totalprice' value='"+ totalPrice+"'>";
+    cell3.innerHTML = "<input type='hidden' name='numOfOrders' value='"+ numOfOrders+"'>";
 
 
 }
