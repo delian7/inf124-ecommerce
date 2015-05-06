@@ -38,7 +38,7 @@
           </div>
 
           <div class="row">
-            <a href="chipotle.php">
+            <a href="#">
               <span class="col-1 coming-soon">
                 <img id="logo" height="75" src="assets/img/chipotle.png">
 
