@@ -32,7 +32,10 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
             $display.
             "</tt></body></html";
 
-echo $display;
+// echo "<script type='text/javascript'>alert('$display');</script>";
+
+
+
 
 $filename = "data/feedback.txt";
 
@@ -46,6 +49,8 @@ fwrite($fileVar, "Date received: ".date("jS \of F, Y \a\\t H:i:s\n")) or die("Er
 fwrite($fileVar, $email_message) or die("Error: Could not write to the log file.");
 
 
+
+header('Location: feedback-confirmation.php');
 
 
 
