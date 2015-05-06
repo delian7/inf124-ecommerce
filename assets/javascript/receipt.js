@@ -51,13 +51,18 @@ function drawReceipt() {
     cell1.innerText = item;
     cell2.innerText = "$" + price.toFixed(2);
 
+    var row = formTable.insertRow(0);
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    cell0.innerHTML = "<input type='hidden' name='quantity"+ i +" value='"+ quantity+"'>";
+    cell1.innerHTML = "<input type='hidden' name='item"+ i +" value='"+ item+"'>";
 
   };
 
   //insert subtotal row at last position for SUBTOTAL
   var row = receiptTable.insertRow();
   row.style.height = "3em";
-
   var cell0 = row.insertCell(0);
   var cell1 = row.insertCell(1);
   var cell2 = row.insertCell(2);
