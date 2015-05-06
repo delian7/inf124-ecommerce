@@ -90,7 +90,7 @@
 
       </div>
 
-      <?php include("common/sidebar.html");?>
+      <?php include("common/sidebar.php");?>
     </div>
 
   </div>
