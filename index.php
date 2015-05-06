@@ -14,15 +14,17 @@
 
     <div class="container">
       <div id="main">
-        <p>Delicious UCI Restaurants that we offer</p>
+        <h2 class="center">Welcome to Food2U</h3>
+        <h3 class="center">Where UCI students deliver food to other students.</h3>
+        <p>Just click your favorite restaurant, from the list below and then click order. A UCI student will then contact you and deliver the Food2U.</p><br />
 
         <div class="grid-container outline">
 
-          <div class="row">
-            <a href="chipotle.php">
-              <span class="col-1 coming-soon">
-                <img id="logo" height="75" src="assets/img/chipotle.png">
 
+          <div class="row">
+            <a href="in-n-out.php">
+              <span class="col-1">
+                <img id="logo" height="75" src="assets/img/in-n-out.png">
               </span>
             </a>
             <a href="starbucks.php">
@@ -31,18 +33,24 @@
               </span>
             </a>
           </div>
+
           <div class="row">
-            <a href="in-n-out.php">
-              <span class="col-1">
-                <img id="logo" height="75" src="assets/img/in-n-out.png">
+            <a href="chipotle.php">
+              <span class="col-1 coming-soon">
+                <img id="logo" height="75" src="assets/img/chipotle.png">
+
               </span>
             </a>
+
+
             <a href="#">
-              <span class="col-1">
+              <span class="col-1 coming-soon">
                 <img id="logo" height="75" src="assets/img/chick-fil-a.png">
               </span>
             </a>
           </div>
+
+
 
         </div>
 
