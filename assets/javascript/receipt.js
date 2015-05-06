@@ -1,6 +1,6 @@
 //global variable allOrders to keep track of allOrders
 allOrders = [];
-
+var totalPrice = 0;
 
 
 //this function really does nothing right now since we need PHP to store the variables in our current session
@@ -18,7 +18,7 @@ function addToAllOrders(orders) {
 function drawReceipt() {
 
   //will be used for the SUBTOTAL
-  var totalPrice = 0;
+
 
   //find the receiptTable
   var receiptTable = document.getElementById("receiptTable");
@@ -55,8 +55,8 @@ function drawReceipt() {
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);
     var cell2 = row.insertCell(2);
-    cell0.innerHTML = "<input type='hidden' name='quantity"+ i +" value='"+ quantity+"'>";
-    cell1.innerHTML = "<input type='hidden' name='item"+ i +" value='"+ item+"'>";
+    cell0.innerHTML = "<input type='hidden' name='quantity"+ i +"' value='"+ quantity+"'>";
+    cell1.innerHTML = "<input type='hidden' name='item"+ i +"' value='"+ item+"'>";
 
   };
 
@@ -103,9 +103,11 @@ function renderUserForm(formTable) {
     //phone
     var row = formTable.insertRow();
     var cell0 = row.insertCell(0);
-    var cell1 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell();
     cell0.innerHTML = '<input type="text" name="phone" size="15" placeholder="Phone Number">'
     cell1.innerHTML = '<input type="text" name="email" size="15" placeholder="Email">'
+    cell2.innerHTML = "<input type='hidden' name='totalprice' value='"+ totalPrice+"'>";
 
 
 }
