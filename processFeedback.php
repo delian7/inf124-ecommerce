@@ -35,7 +35,7 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
 echo $display;
 
 
-$fileVar = fopen(data/feedback.txt, "a") or die("Error: Could not open the log file.");
+$fileVar = fopen("data/feedback.txt", "a") or die("Error: Could not open the log file.");
 
 fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
 
