@@ -55,8 +55,8 @@
             </tr>
 
             <tr>
-              <td><input type="submit" value="Send Message"></td>
-              <td align="right"><input type="reset" value="Clear Form" /></td>
+              <td><input type="reset" value="Clear Form" /></td>
+              <td align="right"><input type="submit" value="Send Message" /></td>
             </tr>
           </table>
       </form>
