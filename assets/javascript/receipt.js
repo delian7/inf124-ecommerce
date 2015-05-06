@@ -1,7 +1,7 @@
 //global variable allOrders to keep track of allOrders
 allOrders = [];
 var totalPrice = 0;
-var numOfOrders = allOrders[0].length;
+var numOfOrders = 0;
 
 
 //this function really does nothing right now since we need PHP to store the variables in our current session
@@ -9,6 +9,8 @@ function addToAllOrders(orders) {
   //as orders (from other pages come in), append them to the master order
 
   allOrders.push(orders);
+
+  numOfOrders = allOrders[0].length;
 
   //helpful to console.log(allOrders) to understand what's going on
   //console.log(allOrders);
