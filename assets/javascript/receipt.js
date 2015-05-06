@@ -1,6 +1,8 @@
 //global variable allOrders to keep track of allOrders
 allOrders = [];
 
+
+
 //this function really does nothing right now since we need PHP to store the variables in our current session
 function addToAllOrders(orders) {
   //as orders (from other pages come in), append them to the master order
@@ -53,7 +55,7 @@ function drawReceipt() {
   };
 
   //insert subtotal row at last position for SUBTOTAL
-  var row = receiptTable.insertRow(allOrders[0].length + 1);
+  var row = receiptTable.insertRow();
   row.style.height = "3em";
 
 
@@ -64,4 +66,18 @@ function drawReceipt() {
   cell0.innerText = "";
   cell1.innerHTML = "<strong>SUBTOTAL: </strong>";
   cell2.innerHTML = "$" + totalPrice.toFixed(2);
+
+  var row = receiptTable.insertRow();
+  row.style.height = "3em";
+
+
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+
+  cell0.innerText = "";
+  cell1.innerHTML = '<button class="center" type="button" name="button">Checkout</button>';
+  cell2.innerHTML = "";
+
+
 }
