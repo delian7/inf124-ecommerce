@@ -22,10 +22,10 @@ function drawReceipt() {
 
   //find the receiptTable
   var receiptTable = document.getElementById("receiptTable");
+  var formTable = document.getElementById("userDataForm");
 
   //insert Table Headers
   var row = receiptTable.insertRow(0);
-
   var cell0 = row.insertCell(0);
   cell0.style.width = "3em";
   var cell1 = row.insertCell(1);
@@ -47,10 +47,10 @@ function drawReceipt() {
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);
     var cell2 = row.insertCell(2);
-
     cell0.innerText = quantity;
     cell1.innerText = item;
     cell2.innerText = "$" + price.toFixed(2);
+
 
   };
 
@@ -58,26 +58,56 @@ function drawReceipt() {
   var row = receiptTable.insertRow();
   row.style.height = "3em";
 
-
   var cell0 = row.insertCell(0);
   var cell1 = row.insertCell(1);
   var cell2 = row.insertCell(2);
-
   cell0.innerText = "";
   cell1.innerHTML = "<strong>SUBTOTAL: </strong>";
   cell2.innerHTML = "$" + totalPrice.toFixed(2);
 
-  var row = receiptTable.insertRow();
-  row.style.height = "3em";
+
+  renderUserForm(formTable);
+
+  renderSubmitButton(formTable);
 
 
+}
+
+
+
+function renderUserForm(formTable) {
+
+
+
+
+    //first and last name
+    var row = formTable.insertRow();
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    cell0.innerHTML = '<input type="text" name="firstname" size="15" placeholder="First Name">'
+    cell1.innerHTML = '<input type="text" name="lastname" size="15" placeholder="Last Name">';
+
+    //Address and (city)
+    var row = formTable.insertRow();
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    cell0.innerHTML = '<input type="text" name="address" size="20" placeholder="Address">'
+    cell1.innerText = ', Irvine, CA';
+
+    //phone
+    var row = formTable.insertRow();
+    var cell0 = row.insertCell(0);
+    cell0.innerHTML = '<input type="text" name="phone" size="20" placeholder="Phone Number">'
+
+    console.log(allOrders)
+
+}
+
+function renderSubmitButton(formTable) {
+  //submit button
+  var row = formTable.insertRow();
   var cell0 = row.insertCell(0);
   var cell1 = row.insertCell(1);
-  var cell2 = row.insertCell(2);
-
-  cell0.innerText = "";
-  cell1.innerHTML = '<button class="center" type="button" name="button">Checkout</button>';
-  cell2.innerHTML = "";
-
-
+  cell0.innerText = ''
+  cell1.innerHTML = '<input type="submit" value="Place Order">'
 }
