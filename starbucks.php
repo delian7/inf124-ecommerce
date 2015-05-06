@@ -6,7 +6,6 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <script language="javascript" type="text/javascript" src="assets/javascript/starbucks.js"></script>
-  <script language="javascript" type="text/javascript" src="assets/javascript/receipt.js"></script>
 </head>
 
 <script>console.log(window.name)</script>
