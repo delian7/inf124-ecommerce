@@ -41,9 +41,9 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
 
 
 //
-// $filename = "/data/feedback.txt";
+$filename = "data/feedback.txt";
 
-$fileVar = fopen("../inf124-ecommerce/data/feedback.txt", "wr") or die("Error: Could not open the log file.");
+$fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
 // chmod("data/feedback.txt", 0777);
 
 fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
