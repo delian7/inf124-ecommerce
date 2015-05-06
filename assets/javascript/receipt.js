@@ -87,6 +87,7 @@ function renderUserForm(formTable) {
     cell0.innerHTML = '<input type="text" name="firstname" size="15" placeholder="First Name">'
     cell1.innerHTML = '<input type="text" name="lastname" size="15" placeholder="Last Name">';
 
+
     //Address and (city)
     var row = formTable.insertRow();
     var cell0 = row.insertCell(0);
@@ -97,9 +98,10 @@ function renderUserForm(formTable) {
     //phone
     var row = formTable.insertRow();
     var cell0 = row.insertCell(0);
-    cell0.innerHTML = '<input type="text" name="phone" size="20" placeholder="Phone Number">'
+    var cell1 = row.insertCell(0);
+    cell0.innerHTML = '<input type="text" name="phone" size="15" placeholder="Phone Number">'
+    cell1.innerHTML = '<input type="text" name="email" size="15" placeholder="Email">'
 
-    console.log(allOrders)
 
 }
 
