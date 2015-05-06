@@ -32,19 +32,18 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
             $display.
             "</tt></body></html";
 
-// echo "<script type='text/javascript'>alert('$display');</script>";
 
 
-$filename = "data/feedback.txt";
+// $filename = "data/feedback.txt";
 
-$fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
-chmod($filename, 0777);
+// $fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
+// chmod($filename, 0777);
 
-fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
+// fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
 
-fwrite($fileVar, "Date received: ".date("jS \of F, Y \a\\t H:i:s\n")) or die("Error: Could not write to the log file.");
+// fwrite($fileVar, "Date received: ".date("jS \of F, Y \a\\t H:i:s\n")) or die("Error: Could not write to the log file.");
 
-fwrite($fileVar, $email_message) or die("Error: Could not write to the log file.");
+// fwrite($fileVar, $email_message) or die("Error: Could not write to the log file.");
 
 
 
