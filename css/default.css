@@ -24,16 +24,16 @@ div#companyLogo {
 }
 
 #callToAction {
-  height: 25%;
+  height: 20%;
 }
 
 div#header {
   margin-bottom: 1em;
-  min-height: 25%;
+  min-height: 15%;
 }
 
 div#header img {
-  height: 25%;
+  height: 20%;
 }
 
 a {
