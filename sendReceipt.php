@@ -2,56 +2,29 @@
 
 
 //Construct message
-$email_message = "From: ".$_POST['firstName']." ".$_POST['lastName']."\r\n".
-                "E-mail address: ".$_POST['emailAddress']."\r\n".
-                "Phone number: ".$_POST['phoneNumber']."\r\n".
-                "Subject: ".$_POST['subject']."\r\n".
-                $_POST['message']."\r\n";
+$name = $_POST['firstname']." ".$_POST['lastname'];
+$address = $_POST['address']." Irvine, CA";
 
-$headerToBusiness = "From: $_POST[emailAddress]\r\n";
-mail("food2uteam@gmail.com", $_POST['subject'], $email_message, $headerToBusiness);
+$phoneNumber = $_POST['phone'];
 
 
-$client_email_message = "To: ".$_POST['firstName']." ".$_POST['lastName']."\r\n".
-                        "The following message from you was received by Food2U:\r\n\r\n".
-                        $email_message.
-                        "-------------------------\r\nWe would like to thank you for your feedback and business.\r\n".
-                        "The Food2U team\r\n-------------------------\r\n";
+$receiptText = "Customer Name: ".$name."\r\n".
+                "Address: ".$address."\r\n".
+                "Contact Number: ".$phoneNumber."\r\n";
 
 
-if ($_POST['reply']){
-  $client_email_message .="***We will contact you soon with further information.***";
-}
+$fname = "data/receipt.txt";
 
-$headerToClient = "From: food2uteam@gmail.com\r\n";
-mail($_POST['emailAddress'], "Re: ".$_POST['subject'], $client_email_message, $headerToClient);
+$fileVar = fopen($fname, "a") or die("Error: Could not open receipt log file.");
 
-
-$display = str_replace("\r\n", "<br/>\r\n", $client_email_message);
-$display = "<html><head><title>Your Message</title></head><body><tt>".
-            $display.
-            "</tt></body></html";
-
-// echo "<script type='text/javascript'>alert('$display');</script>";
+fwrite($fileVar,"\n----------------------------------\n") or die("Error: Could not write to receipt log file.");
+fwrite($fileVar, "Date of Order: ".date("jS \of F, Y \a\\t H:i:s\n")) or die("Error: Could not write to receipt log file.");
+fwrite($fileVar, $receiptText) or die("Error: Could not write to the receipt log file.");
 
 
 
 
-$filename = "data/feedback.txt";
-
-$fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
-chmod($filename, 0777);
-
-fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
-
-fwrite($fileVar, "Date received: ".date("jS \of F, Y \a\\t H:i:s\n")) or die("Error: Could not write to the log file.");
-
-fwrite($fileVar, $email_message) or die("Error: Could not write to the log file.");
-
-
-
-header('Location: feedback-confirmation.php');
-
+header('Location: order-confirmation.php');
 
 
 ?>

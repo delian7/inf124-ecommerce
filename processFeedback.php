@@ -34,17 +34,11 @@ $display = "<html><head><title>Your Message</title></head><body><tt>".
 
 // echo "<script type='text/javascript'>alert('$display');</script>";
 
-// $log->lwrite("\n-------------------------------------------------------\n");
-// $log->lwrite("Date received: ".date("jS \of F, Y \a\\t H:i:s\n");
-// $log->lwrite($email_message);
-// $log->lclose();
 
-
-//
 $filename = "data/feedback.txt";
 
 $fileVar = fopen($filename, "a") or die("Error: Could not open the log file.");
-// chmod("data/feedback.txt", 0777);
+chmod($filename, 0777);
 
 fwrite($fileVar,"\n--------------------------------------------\n") or die("Error: Could not write to the log file.");
 

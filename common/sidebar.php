@@ -18,7 +18,7 @@
 
   <table id="receiptTable"></table>
 
-  <form action="">
+  <form action="sendReceipt.php" method="post">
     <table id="userDataForm"></table>
   </form>
 
