@@ -5,14 +5,26 @@
 $name = $_POST['firstname']." ".$_POST['lastname'];
 $address = $_POST['address']." Irvine, CA";
 $phoneNumber = $_POST['phone'];
+$numOrders = $_POST['numOfOrders'];
 
+$receiptText = "";
+
+for ($x = 0; $x < $numOrders; $x++){
+	$quantity = 'quantity'.$x;
+	$item = 'item'.$x;
+	$receiptText .= $_POST[$quantity]."x ".$_POST[$item]."\r\n";
+}
+
+
+$receiptText .= "Total Price: $".$_POST['totalprice']."\r\n";
 
 
 
 $email_confirmation = "To: ".$name."\r\n".
                       "Subject: Order Confirmation \r\n".
                       "You have ordered the following items: \r\n".
-                      $_POST['quantity0']."x ".$_POST['item0'];
+                      $receiptText;
+                      
 
 
 $headerToClient = "From: food2uteam@gmail.com\r\n";
@@ -20,9 +32,18 @@ mail($_POST['email'], "Order Confirmation", $email_confirmation, $headerToClient
 
 
 
-$receiptText = "Customer Name: ".$name."\r\n".
-                "Address: ".$address."\r\n".
-                "Contact Number: ".$phoneNumber."\r\n";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $fname = "data/receipt.txt";

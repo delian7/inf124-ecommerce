@@ -111,7 +111,7 @@ function renderUserForm(formTable) {
     var cell3 = row.insertCell();
     cell0.innerHTML = '<input type="text" name="phone" size="15" placeholder="Phone Number">'
     cell1.innerHTML = '<input type="text" name="email" size="15" placeholder="Email">'
-    cell2.innerHTML = "<input type='hidden' name='totalprice' value='"+ totalPrice+"'>";
+    cell2.innerHTML = "<input type='hidden' name='totalprice' value='"+ totalPrice.toFixed(2)+"'>";
     cell3.innerHTML = "<input type='hidden' name='numOfOrders' value='"+ numOfOrders+"'>";
 
 
